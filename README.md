@@ -17,7 +17,7 @@ This does not primarily benefit Chrome since that browser already gives `async` 
 
 For an example of the performance impact for this change, see the [Site Kit GTag Script Deprioritization](https://github.com/westonruter/google-site-kit-gtag-script-deprioritization) plugin.
 
-I intend to propose this change for inclusion in Jetpack.
+I've [proposed](https://github.com/Automattic/jetpack/issues/43631) these changes for inclusion in Jetpack.
 
 ## Installation ##
 
