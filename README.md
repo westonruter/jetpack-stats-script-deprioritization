@@ -8,12 +8,12 @@ Tags:         performance
 
 ## Description ##
 
-This plugin deprioritizes the loading of the [stats](https://jetpack.com/support/jetpack-stats/) script in the [Jetpack](https://wordpress.org/plugins/google-site-kit/) plugin to attempt to reduce network contention with loading resources in the critical rendering path (e.g. the LCP element image). It deprioritizes the script by:
+This plugin deprioritizes the loading of the [Stats](https://jetpack.com/support/jetpack-stats/) script in the [Jetpack](https://wordpress.org/plugins/google-site-kit/) plugin to attempt to reduce network contention with loading resources in the critical rendering path (e.g. the LCP element image). It deprioritizes the script by:
 
 1. Adding `fetchpriority="low"` to the `script` tag.
 2. Removing the `dns-prefetch` for `stats.wp.com`.
 
-This does not primarily benefit Chrome since it already gives `async` scripts a priority of low. It does benefit Safari and Firefox, however, since they have a default medium/normal priority.
+This does not primarily benefit Chrome since that browser already gives `async` scripts a priority of low. It does benefit Safari and Firefox, however, since they have a default medium/normal priority.
 
 For an example of the performance impact for this change, see the [Site Kit GTag Script Deprioritization](https://github.com/westonruter/google-site-kit-gtag-script-deprioritization) plugin.
 
